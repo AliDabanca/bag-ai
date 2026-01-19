@@ -55,7 +55,7 @@ async def akilli_oneri(mesaj: str, db: Session = Depends(get_db)):
         
         # HuggingFace'e istek atıyoruz
         sonuclar = await client.sentence_similarity(
-            model="sentence-transformers/all-MiniLM-L6-v2",
+            model="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
             sentence=mesaj,
             other_sentences=canta_isimleri
         )
